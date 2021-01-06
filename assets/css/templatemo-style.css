@@ -366,7 +366,7 @@ button:hover {
 .right-image-post {
     margin-top: 60px;
     padding-top: 60px;
-    border-top: 2px solid rgba(250, 250, 250, 0.1);
+    /* border-top: 2px solid rgba(250, 250, 250, 0.1); */
 }
 
 .left-image img,
@@ -412,6 +412,37 @@ button:hover {
     transition: all 0.5s;
 }
 
+.service-item p span.emphasis {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.service-item p span.quote {
+    font-style: italic;
+}
+
+.service-item p.attribution {
+    text-align: center;
+}
+
+.service-item:hover p.attribution span.falsehood {
+    text-decoration: line-through;
+    text-decoration-color: #EC4308;
+}
+
+.service-item p.attribution span.admission {
+    visibility: hidden;
+}
+
+.service-item:hover p.attribution span.admission {
+    visibility: visible;
+    color:#EC4308;
+}
+
+.service-item:hover p span.emphasis {
+    color: #EC4308;
+}
+
 .service-item:hover {
     background-color: rgba(250, 250, 250, 1);
 }
@@ -435,36 +466,114 @@ button:hover {
 }
 
 .service-item .first-service-icon {
-    background-image: url(../images/first-white-icon.png);
+    background-image: url(../images/mytimes-icon-white-circle2.png);
 }
 
 .service-item:hover .first-service-icon {
-    background-image: url(../images/first-main-icon.png);
+    background-image: url(../images/mytimes-icon-main-circle2.png);
 }
 
 .service-item .second-service-icon {
-    background-image: url(../images/second-white-icon.png);
+    background-image: url(../images/waylon-icon-white-circle.png);
 }
 
 .service-item:hover .second-service-icon {
-    background-image: url(../images/second-main-icon.png);
+    background-image: url(../images/waylon-icon-main-circle.png);
 }
 
 .service-item .third-service-icon {
-    background-image: url(../images/third-white-icon.png);
+    background-image: url(../images/muse-icon-white-circle.png);
 }
 
 .service-item:hover .third-service-icon {
-    background-image: url(../images/third-main-icon.png);
+    background-image: url(../images/muse-icon-main-circle.png);
 }
 
 .service-item .fourth-service-icon {
-    background-image: url(../images/fourth-white-icon.png);
+    background-image: url(../images/git-logo-white-circle.png);
 }
 
 .service-item:hover .fourth-service-icon {
-    background-image: url(../images/fourth-main-icon.png);
+    background-image: url(../images/git-logo-main-circle.png);
 }
+
+/* My Skill Set */
+
+.tech-list {
+    display: inline-block;
+}
+
+.tech-icon {
+    /* height: 140px;
+    line-height: 140px; */
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    /* width: 100%; */
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.tech-image {
+    height: 110px;
+    width: 110px;
+    display: inline-block;
+    padding: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    vertical-align: -25%;
+}
+
+.first-tech-image {
+    background-image: url(../images/ruby_logo_white.png);
+}
+
+.second-tech-image {
+    background-image: url(../images/rails-logo-white2.png);
+}
+
+.third-tech-image {
+    background-image: url(../images/sql-logo-white.png);
+}
+
+.fourth-tech-image {
+    background-image: url(../images/sql-lite-logo-white2.png);
+}
+
+.fifth-tech-image {
+    background-image: url(../images/postgresql-logo-white2.png);
+}
+
+.sixth-tech-image {
+    background-image: url(../images/mongodb-logo-white.png);
+}
+
+.seventh-tech-image {
+    background-image: url(../images/mongoose-logo-white.png);
+}
+
+.eighth-tech-image {
+    background-image: url(../images/express-logo-white2.png);
+}
+
+.ninth-tech-image {
+    background-image: url(../images/redux-logo-white.png);
+}
+
+.tenth-tech-image {
+    background-image: url(../images/webpack-logo-white.png);
+}
+
+.eleventh-tech-image {
+    background-image: url(../images/jquery-logo-white.png);
+}
+
+.twelfth-tech-image {
+    background-image: url(../images/heroku-logo-white.png);
+}
+
 
 
 /* My Work */
