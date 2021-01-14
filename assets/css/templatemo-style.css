@@ -850,6 +850,10 @@ section.contact-me {
     box-shadow: none;
 }
 
+.g-recaptcha {
+    margin: 0 auto 30px auto;
+}
+
 #contact {
     text-align: center;
 }
