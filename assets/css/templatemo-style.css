@@ -221,23 +221,23 @@ html {
 
 .menu {
     left: 10%;
-  -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
-  -webkit-overflow-scrolling: touch;
-  background-color: #EC4308;
-  box-sizing: border-box;
-  height: 100vh;  
-  max-height: 100vh !important;
-  max-width: 80vw !important;
-  min-width: 45px !important;
-  outline: none;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-  padding: 0;
-  position: fixed !important;
-  top: calc(0px);  
-  width: 20%;
-  will-change: transform;
-  z-index: 9999 !important;
+    -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
+    -webkit-overflow-scrolling: touch;
+    background-color: #EC4308;
+    box-sizing: border-box;
+    height: 100vh;  
+    max-height: 100vh !important;
+    max-width: 80vw !important;
+    min-width: 45px !important;
+    outline: none;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding: 0;
+    position: fixed !important;
+    top: calc(0px);  
+    width: 20%;
+    will-change: transform;
+    z-index: 9999 !important;
 }
 
 .menu-toggle {
@@ -390,112 +390,6 @@ button:hover {
 }
 
 
-/* Services */
-
-.my-services .col-md-6 {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.service-item {
-    margin-bottom: 10px;
-    padding: 50px;
-    background-color: rgba(250, 250, 250, 0.1);
-    transition: all 0.5s;
-}
-
-.service-item h4 {
-    transition: all 0.5s;
-}
-
-.service-item p {
-    transition: all 0.5s;
-}
-
-.service-item p span.emphasis {
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.service-item p span.quote {
-    font-style: italic;
-}
-
-.service-item p.attribution {
-    text-align: center;
-}
-
-.service-item:hover p.attribution span.falsehood {
-    text-decoration: line-through;
-    text-decoration-color: #EC4308;
-}
-
-.service-item p.attribution span.admission {
-    visibility: hidden;
-}
-
-.service-item:hover p.attribution span.admission {
-    visibility: visible;
-    color:#EC4308;
-}
-
-.service-item:hover p span.emphasis {
-    color: #EC4308;
-}
-
-.service-item:hover {
-    background-color: rgba(250, 250, 250, 1);
-}
-
-.service-item:hover h4 {
-    color: #1e1e1e;
-}
-
-.service-item:hover p {
-    color: #4a4a4a;
-}
-
-.service-item .service-icon {
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    margin-bottom: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 0.5s;
-}
-
-.service-item .first-service-icon {
-    background-image: url(../images/mytimes-icon-white-circle2.png);
-}
-
-.service-item:hover .first-service-icon {
-    background-image: url(../images/mytimes-icon-main-circle2.png);
-}
-
-.service-item .second-service-icon {
-    background-image: url(../images/waylon-icon-white-circle.png);
-}
-
-.service-item:hover .second-service-icon {
-    background-image: url(../images/waylon-icon-main-circle.png);
-}
-
-.service-item .third-service-icon {
-    background-image: url(../images/muse-icon-white-circle.png);
-}
-
-.service-item:hover .third-service-icon {
-    background-image: url(../images/muse-icon-main-circle.png);
-}
-
-.service-item .fourth-service-icon {
-    background-image: url(../images/git-logo-white-circle.png);
-}
-
-.service-item:hover .fourth-service-icon {
-    background-image: url(../images/git-logo-main-circle.png);
-}
 
 /* My Skill Set */
 
@@ -575,6 +469,162 @@ button:hover {
 }
 
 
+/* My Project Portfolio */
+
+.my-projects .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.project-item {
+    margin-bottom: 10px;
+    padding: 50px;
+    background-color: rgba(250, 250, 250, 0.1);
+    transition: all 0.5s;
+}
+
+.project-item h4 {
+    transition: all 0.5s;
+}
+
+.project-item p {
+    transition: all 0.5s;
+}
+
+.project-item p span.emphasis {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.project-item p span.quote {
+    font-style: italic;
+}
+
+.project-item p.attribution {
+    text-align: center;
+}
+
+.project-item:hover p.attribution span.falsehood {
+    text-decoration: line-through;
+    text-decoration-color: #EC4308;
+}
+
+.project-item p.attribution span.admission {
+    visibility: hidden;
+}
+
+.project-item:hover p.attribution span.admission {
+    visibility: visible;
+    color:#EC4308;
+}
+
+.project-item:hover p span.emphasis {
+    color: #EC4308;
+}
+
+.project-item:hover {
+    background-color: rgba(250, 250, 250, 1);
+}
+
+.project-item:hover h4 {
+    color: #1e1e1e;
+}
+
+.project-item:hover p {
+    color: #4a4a4a;
+}
+
+.project-item .project-icon {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-bottom: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+.project-item .first-project-icon {
+    background-image: url(../images/mytimes-icon-white-circle2.png);
+}
+
+.project-item:hover .first-project-icon {
+    background-image: url(../images/mytimes-icon-main-circle2.png);
+}
+
+.project-item .second-project-icon {
+    background-image: url(../images/waylon-icon-white-circle.png);
+}
+
+.project-item:hover .second-project-icon {
+    background-image: url(../images/waylon-icon-main-circle.png);
+}
+
+.project-item .third-project-icon {
+    background-image: url(../images/muse-icon-white-circle.png);
+}
+
+.project-item:hover .third-project-icon {
+    background-image: url(../images/muse-icon-main-circle.png);
+}
+
+.project-item .fourth-project-icon {
+    background-image: url(../images/git-logo-white-circle.png);
+}
+
+.project-item:hover .fourth-project-icon {
+    background-image: url(../images/git-logo-main-circle.png);
+}
+
+.project-thumbnail {
+    width: 108px;
+    height: 70px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border: 1px solid black;
+    opacity: 20%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 1105px) and (min-width: 957) {
+    .project-thumbnail {
+        margin-left: 15px
+    }
+}
+
+@media screen and (max-width: 958px) and (min-width: 768) {
+    .project-thumbnail {
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    .project-thumbnail {
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+.project-item:hover .project-thumbnail {
+    opacity: 100%;
+}
+
+.first-project-thumbnail {
+    background-image: url(../images/wordcross-small.gif);
+}
+
+.second-project-thumbnail {
+    background-image: url(../images/waylon-small.gif);
+}
+
+.third-project-thumbnail {
+    background-image: url(../images/muse-small.gif);
+}
 
 /* My Work */
 
@@ -636,6 +686,12 @@ section.my-work .section-heading {
     border-bottom: 2px solid rgba(250,250,250,0.1);
     padding-bottom: 30px;
     margin-bottom: 30px;
+    filter: brightness(0.4);
+}
+
+.isotope-item:hover {
+    z-index: 1;
+    filter: none;
 }
 
 .isotope-item img {
@@ -673,7 +729,7 @@ figure.snip1321 figcaption {
   right: 20px;
   position: absolute;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 figure.snip1321 h4 {
     margin-top: 15px;
@@ -721,21 +777,24 @@ figure.snip1321 a {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
 }
+
 figure.snip1321:hover figcaption,
 figure.snip1321.hover figcaption {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   opacity: 1;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.7s;
+  transition-delay: 0.7s;
 }
 figure.snip1321:hover:after,
 figure.snip1321.hover:after {
-  -webkit-transform: rotateX(0);
-  transform: rotateX(0);
-  opacity: 0.9;
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 0.9;
 }
 
 
