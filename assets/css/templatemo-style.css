@@ -221,6 +221,7 @@ html {
 
 .menu {
     left: 10%;
+    transition: 233ms cubic-bezier(0, 0, 0.21, 1);
     -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
     -webkit-overflow-scrolling: touch;
     background-color: #EC4308;
@@ -321,6 +322,14 @@ html {
 
 
 /* Buttons */
+
+.white-button {
+    display: inline-block;
+    padding: 0;
+    margin-right: 10px;
+}
+
+
 
 .white-button a {
     display: inline-block;
