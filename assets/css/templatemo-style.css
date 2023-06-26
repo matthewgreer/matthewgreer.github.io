@@ -481,7 +481,7 @@ button:hover {
 }
 
 .tech-image-redis {
-    background-image: url(../images/redis-logo-maybe.png);
+    background-image: url(../images/redis-logo-white.png);
 }
 
 .tech-image-redux {
@@ -501,7 +501,7 @@ button:hover {
 }
 
 .tech-image-viewcomponents {
-    background-image: url(../images/viewcomponent-white-logomark.png);
+    background-image: url(../images/viewcomponent-logo-white.png);
 }
 
 .tech-image-webpack {
