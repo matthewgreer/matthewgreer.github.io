@@ -410,6 +410,7 @@ button:hover {
 /* My Skill Set */
 
 .skills {
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -421,14 +422,44 @@ button:hover {
 
 .skill-set li {
   display: list-item;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.skill-set.tech-names {
-    color: var(--color-orange);
+.skill-set-blurb {
+  margin-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 7%;
+}
+
+.skill-set-categories {
+  color: var(--color-orange);
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.skill-set-divider {
+  color: var(--color-orange);
+  padding: 0 5px;
+}
+
+.skill-set-skills {
+  color: var(--color-white);
 }
 
 .tech-list {
   display: inline-block;
+  margin-top: 50px;
+}
+
+.tech-list-svg {
+  height: 100px;
+  margin: 5px;
+  width: 100px;
+}
+
+.tech-list-svg-narrow {
+  margin: 5px -10px;
 }
 
 .tech-icon {
@@ -436,7 +467,7 @@ button:hover {
   font-size: 24px;
   font-weight: 700;
   color: var(--color-white);
-    padding: 5px;
+  margin: 5px 10px;
   transition: all 0.5s;
 }
 
@@ -505,6 +536,18 @@ button:hover {
 
 .tech-image-webpack {
   background-image: url(../images/webpack-logo-white.png);
+}
+
+@media screen and (max-width: 494px) {
+  .skill-set {
+    font-size: 12px;
+  }
+
+  .tech-list-svg {
+    height: 50px;
+    margin: 3px;
+    width: 50px;
+  }
 }
 
 
