@@ -89,10 +89,6 @@ html {
   box-sizing: inherit;
 }
 
-.clearfix {
-  zoom: 1;
-}
-
 .clearfix:before,
 .clearfix:after {
   content: "";
