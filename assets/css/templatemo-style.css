@@ -378,7 +378,6 @@ button:hover {
 .right-image-post {
   margin-top: 60px;
   padding-top: 60px;
-  /* border-top: 2px solid rgba(250, 250, 250, 0.1); */
 }
 
 .left-image img,
@@ -622,13 +621,13 @@ button:hover {
   transition: all 0.5s;
 }
 
-@media screen and (max-width: 1105px) and (min-width: 957) {
+@media screen and (max-width: 1105px) and (min-width: 958px) {
   .project-thumbnail {
     margin-left: 15px
   }
 }
 
-@media screen and (max-width: 958px) and (min-width: 768) {
+@media screen and (max-width: 957px) and (min-width: 768px) {
   .project-thumbnail {
     display: block;
     margin: 15px auto;
