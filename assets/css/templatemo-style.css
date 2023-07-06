@@ -665,6 +665,15 @@ section.my-work .section-heading {
   padding: 80px 45px 50px 45px;
 }
 
+.prior-career-blurb h4 {
+  margin-top: 0;
+}
+
+section.my-work .media-link {
+  color: var(--color-orange);
+  font-weight: 900;
+}
+
 .isotope-wrapper {
   position: relative;
   width: 100%;
