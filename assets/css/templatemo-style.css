@@ -548,6 +548,34 @@ button:hover {
   transition: all 0.5s;
 }
 
+.project-item .nyt-streak {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.project-item .my-nyt-streak {
+  color: var(--color-orange);
+  display: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-item .mystery {
+  display: block;
+}
+
+.project-item:hover .nyt-streak {
+  font-weight: 700;
+}
+
+.project-item:hover .my-nyt-streak {
+  display: block;
+}
+
+.project-item:hover .mystery {
+  display: none;
+}
+
 .project-item .project-icon-teepublic {
   background-image: url(../images/teepublic-icon-white-circle.png);
 }

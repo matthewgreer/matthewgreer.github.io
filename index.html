@@ -585,6 +585,9 @@
                     <span class="emphasis">JavaScript</span> |
                     <span class="emphasis">jBuilder</span>
                   </p>
+                  <p class="nyt-streak">
+                    My current NYT Crossword puzzle solving streak: <span class="my-nyt-streak"></span><span class="mystery">? ? ?</span>
+                  </p>
                 </div>
               </a>
             </div>
@@ -1073,6 +1076,19 @@
       $(window).scroll(function() {
         checkSection();
       });
+    </script>
+    <script>
+      const updateStreak = () => {
+        const myStreak = document.querySelector(".my-nyt-streak");
+        const startStreak = new Date("2019-12-26 00:00:00");
+        const today = new Date();
+        const streak = Math.floor(
+          (today.getTime() - startStreak.getTime()) / (1000 * 3600 * 24)
+        );
+        if (myStreak) { myStreak.innerHTML = streak; }
+      }
+
+      document.addEventListener("DOMContentLoaded", updateStreak);
     </script>
   </body>
 </html>
