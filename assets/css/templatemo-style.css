@@ -669,9 +669,13 @@ section.my-work .section-heading {
   margin-top: 0;
 }
 
-section.my-work .media-link {
+.media-link {
   color: var(--color-orange);
-  font-weight: 900;
+  font-weight: 700;
+}
+
+.media-link:visited {
+  color: var(--color-orange);
 }
 
 .isotope-wrapper {
