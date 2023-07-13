@@ -185,6 +185,16 @@ html {
   color: var(--color-orange);
 }
 
+.menu .social-network ul li a:hover .social-icon {
+  fill: var(--color-orange);
+}
+
+.menu .social-icon {
+  fill: var(--color-white);
+  height: 20px;
+  width: 20px;
+}
+
 .menu .copyright-text {
   position: relative;
   margin-top: 30px;
@@ -246,41 +256,30 @@ html {
 }
 
 .menu-toggle {
-  color: var(--color-white);
+  background-color: var(--color-white);
   cursor: pointer;
-  font-size: 25px;
+  fill: var(--color-orange);
   position: fixed;
-  right: 25px;
-  top: 25px;
+  width: 60px;
+  height: 60px;
+  padding: 22px;
 }
 
 #menu-toggle {
   z-index: 999;
   cursor: pointer;
-  position: fixed;
   top: 0;
   left: 0;
-  color: var(--color-orange);
-  background-color: var(--color-white);
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  display: inline-block;
-  line-height: 60px;
-}
-
-.menu-close {
-  cursor: pointer;
 }
 
 #menu-close {
+  position: relative;
+}
+
+.menu-close {
   background-color: var(--color-white);
-  cursor: pointer;
-  color: var(--color-orange);
-  font-size: 20px;
-  line-height: 60px;
-  padding-right: 15px;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
 }
 
