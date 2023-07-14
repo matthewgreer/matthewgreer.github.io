@@ -13,12 +13,12 @@ body {
 }
 
 #page-wrapper {
-    background: url(../images/butterfly-bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
+  background: url(../images/butterfly-bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
 }
 
 
