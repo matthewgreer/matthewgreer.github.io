@@ -542,10 +542,15 @@ button:hover {
   width: 70px;
   height: 70px;
   display: inline-block;
+  fill: var(--color-white);
   margin-bottom: 30px;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.5s;
+}
+
+.project-item:hover .project-icon {
+  fill: var(--color-orange);
 }
 
 .project-item .nyt-streak {
@@ -576,38 +581,6 @@ button:hover {
   display: none;
 }
 
-.project-item .project-icon-teepublic {
-  background-image: url(../images/teepublic-icon-white-circle.png);
-}
-
-.project-item:hover .project-icon-teepublic {
-  background-image: url(../images/teepublic-icon-main-circle.png);
-}
-
-.project-item .project-icon-mytimes {
-  background-image: url(../images/mytimes-icon-white-circle2.png);
-}
-
-.project-item:hover .project-icon-mytimes {
-  background-image: url(../images/mytimes-icon-main-circle2.png);
-}
-
-.project-item .project-icon-waylon {
-  background-image: url(../images/waylon-icon-white-circle.png);
-}
-
-.project-item:hover .project-icon-waylon {
-  background-image: url(../images/waylon-icon-main-circle.png);
-}
-
-.project-item .project-icon-github {
-  background-image: url(../images/git-logo-white-circle.png);
-}
-
-.project-item:hover .project-icon-github {
-  background-image: url(../images/git-logo-main-circle.png);
-}
-
 .project-thumbnail {
   width: 108px;
   height: 70px;
@@ -620,6 +593,7 @@ button:hover {
   background-position: center center;
   background-repeat: no-repeat;
   transition: all 0.5s;
+  vertical-align: top;
 }
 
 @media screen and (max-width: 1105px) and (min-width: 958px) {
