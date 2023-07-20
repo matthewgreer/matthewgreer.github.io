@@ -743,12 +743,26 @@ figure.snip1321 * {
   transition: all 0.2s ease-out;
 }
 figure.snip1321 figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   top: 50%;
   left: 20px;
   right: 20px;
   position: absolute;
   opacity: 0;
   z-index: 2;
+}
+.search-icon {
+  background-color: var(--color-orange);
+  background-image: url(../images/search-icon.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20%;
+  height: 40px;
+  margin-bottom: 33%;
+  width: 40px;
 }
 figure.snip1321 h4 {
   margin-top: 15px;
