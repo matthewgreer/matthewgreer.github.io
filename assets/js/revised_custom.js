@@ -64,7 +64,7 @@
   // Close menu after click on smaller screens
   window.addEventListener("resize", function() {
     if (window.innerWidth < 846) {
-      var menuLinks = document.querySelectorAll(".main-menu a");
+      var menuLinks = document.querySelectorAll(".nav-items a");
       menuLinks.forEach(function(link) {
         link.addEventListener("click", function() {
           menu.classList.remove("open");
