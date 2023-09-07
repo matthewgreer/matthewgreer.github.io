@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
 
 body {
   --color-black-almost: #1e1e1e;
@@ -9,6 +9,7 @@ body {
   --color-orange-dark: #C33706;
   --color-white: #fff;
   --color-white-almost: #f7f7f7;
+  --font-weight-bold: 700;
   font-family: 'Lato', sans-serif;
 }
 
@@ -47,7 +48,7 @@ p {
 
 h4 {
   font-size: 26px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--color-white);
   letter-spacing: 0.25px;
 }
@@ -91,6 +92,11 @@ html {
   clear: both;
 }
 
+.emphasis {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
 .container {
   margin: 0 auto;
 }
@@ -111,8 +117,7 @@ html {
   height: 70px;
   line-height: 70px;
   display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--color-white);
   width: 100%;
   transition: all 0.5s;
@@ -296,7 +301,7 @@ html {
 
 .ection-heading h2 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--color-white);
 }
 
@@ -312,6 +317,10 @@ html {
   font-size: 16px;
   color: var(--color-white);
   letter-spacing: 0.5px;
+}
+
+.subsection {
+  min-width: 100%;
 }
 
 
@@ -331,7 +340,7 @@ html {
   background-color: var(--color-white);
   color: var(--color-orange);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.5px;
   text-transform: uppercase;
   transition: all 0.5s;
@@ -348,7 +357,7 @@ button {
   background-color: var(--color-white);
   color: var(--color-orange);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.5px;
   text-transform: uppercase;
   transition: all 0.5s;
@@ -418,7 +427,7 @@ button:hover {
 
 .skill-set li {
   display: list-item;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin-bottom: 10px;
 }
 
@@ -495,11 +504,6 @@ button:hover {
   transition: all 0.5s;
 }
 
-.project-item p span.emphasis {
-  font-weight: 700;
-  color: var(--color-white);
-}
-
 .project-item p span.quote {
   font-style: italic;
 }
@@ -562,7 +566,7 @@ button:hover {
   color: var(--color-orange);
   display: none;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .project-item .mystery {
@@ -570,7 +574,7 @@ button:hover {
 }
 
 .project-item:hover .nyt-streak {
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .project-item:hover .my-nyt-streak {
@@ -645,7 +649,7 @@ section.my-work .section-heading {
 
 .media-link {
   color: var(--color-orange);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .media-link:visited {
@@ -668,7 +672,7 @@ section.my-work .section-heading {
   margin-right: 15px;
   padding-bottom: 3px;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   border-bottom: 2px solid transparent;
   transform: ease-in-out 0.5s;
   cursor: pointer;
@@ -774,18 +778,6 @@ figure.snip1321 span {
   font-style: italic;
   display: block;
   color: var(--color-gray);
-}
-figure.snip1321 i {
-  position: relative!important;
-  font-size: 18px;
-  background-color: var(--color-orange);
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 5px;
-  color: var(--color-white);
 }
 figure.snip1321:after {
   background-color: var(--color-white);
