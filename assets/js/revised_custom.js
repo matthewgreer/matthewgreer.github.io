@@ -80,6 +80,92 @@
     });
   });
 
+  // initialize nav
+  // Add "active" class to the first li element in ".nav-items"
+  document.querySelector(".nav-items li:first-child").classList.add("active");
+
+  var showSection = function (section, isAnimate) {
+    var direction = section.replace(/#/, "");
+    var reqSection = document.querySelector(
+      '.section[data-section="' + direction + '"]'
+    );
+    var reqSectionPos = reqSection.offsetTop - 0;
+
+    if (isAnimate) {
+      window.scrollTo({
+        top: reqSectionPos,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo(0, reqSectionPos);
+    }
+  };
+
+  var checkSection = function () {
+    var sections = document.querySelectorAll(".section");
+    var wScroll = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach(function (section) {
+      var topEdge = section.offsetTop - 80;
+      var bottomEdge = topEdge + section.offsetHeight;
+
+      if (topEdge < wScroll && bottomEdge > wScroll) {
+        var currentId = section.getAttribute("data-section");
+        var reqLink = document.querySelector('a[href*="#' + currentId + '"]');
+        var activeLi = reqLink.closest("li");
+
+        // Remove "active" class from all li elements
+        document.querySelectorAll(".nav-items li").forEach(function (li) {
+          li.classList.remove("active");
+        });
+
+        // Add "active" class to the closest li element
+        activeLi.classList.add("active");
+      }
+    });
+  };
+
+  document.querySelector(".nav-items").addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      e.preventDefault();
+      showSection(e.target.getAttribute("href"), true);
+    }
+  });
+
+  document.querySelectorAll(".social-icons a, .social-icons svg").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      let href = e.target.tagName === "A" ? e.target.getAttribute("href") : e.target.closest("a").getAttribute("href");
+      let isAnimated = href[0] === "#";
+      if (isAnimated) {
+        e.preventDefault();
+        showSection(href, isAnimated);
+      }
+    });
+  });
+
+  document.querySelector(".white-button").addEventListener("click", function (e) {
+    if (e.target.tagName === "A" && e.target.classList.contains("section-button")) {
+      e.preventDefault();
+      showSection(e.target.getAttribute("href"), true);
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    checkSection();
+  });
+
+  // Update Current NYT Crossword Solving Streak
+
+  const myStreak = document.querySelector(".my-nyt-streak");
+  const startStreak = new Date("2019-12-26 00:00:00");
+  const today = new Date();
+  const streak = Math.floor(
+    (today.getTime() - startStreak.getTime()) / (1000 * 3600 * 24)
+  );
+  if (myStreak) { myStreak.innerHTML = streak; }
+
+  // initialize lightbox
+
   lightbox.option({
     resizeDuration: 200,
     wrapAround: true
