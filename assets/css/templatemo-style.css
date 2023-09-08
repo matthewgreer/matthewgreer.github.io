@@ -372,6 +372,22 @@ button:hover {
 
 /* Left & Right Post */
 
+.penzance-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 54vh;
+}
+
+.penzance {
+  padding-top: 4rem;
+}
+
+@media screen and (min-width: 846px) {
+  .penzance {
+    padding-top: .825rem;
+  }
+}
+
 .right-image-post {
   margin-top: 0;
   padding-top: 0;
@@ -649,12 +665,18 @@ section.my-work .section-heading {
   margin-top: 0;
 }
 
-.media-link {
+.link {
   color: var(--color-orange);
   font-weight: var(--font-weight-bold);
+  transition: all 0.3s;
 }
 
-.media-link:visited {
+.link:hover,
+.link:visited:hover {
+  color: var(--color-white);
+}
+
+.link:visited {
   color: var(--color-orange);
 }
 
