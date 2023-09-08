@@ -402,7 +402,7 @@ button:hover {
   margin: 0 0.938rem;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
   .right-image-post .row {
     flex-direction: column-reverse;
   }
@@ -469,7 +469,7 @@ button:hover {
   margin: 0.313rem -0.625rem;
 }
 
-@media screen and (max-width: 30.875rem) {
+@media screen and (max-width: 494px) {
   .skill-set {
     font-size: 0.75rem;
   }
@@ -602,20 +602,20 @@ button:hover {
   vertical-align: top;
 }
 
-@media screen and (max-width: 69.063rem) and (min-width: 59.875rem) {
+@media screen and (max-width: 1105px) and (min-width: 958px) {
   .project-thumbnail {
     margin-left: 0.938rem
   }
 }
 
-@media screen and (max-width: 59.813rem) and (min-width: 48rem) {
+@media screen and (max-width: 957px) and (min-width: 768px) {
   .project-thumbnail {
     display: block;
     margin: 0.938rem auto;
   }
 }
 
-@media screen and (max-width: 22.25rem) {
+@media screen and (max-width: 356px) {
   .project-thumbnail {
     display: block;
     margin: 0.938rem auto;
@@ -876,7 +876,7 @@ section.contact-me {
   text-align: center;
 }
 
-@media screen and (max-width: 105rem) {
+@media screen and (max-width: 1680px) {
   .menu {
     left: 5%;
   }
@@ -889,7 +889,7 @@ section.contact-me {
   }
 }
 
-@media screen and (max-width: 105rem) and (min-width: 52.875rem) {
+@media screen and (max-width: 1680px) and (min-width: 846px) {
   .menu .social-network ul li a {
     height: 2.25rem;
     line-height: 2.25rem;
@@ -905,7 +905,7 @@ section.contact-me {
   }
 }
 
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 1280px) {
   .menu {
     left: 0%;
   }
@@ -932,7 +932,7 @@ section.contact-me {
   padding-right: 0;
 }
 
-@media screen and (max-width: 80rem) and (min-width: 52.875rem) {
+@media screen and (max-width: 1280px) and (min-width: 846px) {
   .menu {
     width: 25%;
   }
@@ -943,7 +943,7 @@ section.contact-me {
   display: none;
 }
 
-@media screen and (max-width: 52.813rem) {
+@media screen and (max-width: 845px) {
   #menu-toggle,
   #menu-close {
     display: inline-block;
