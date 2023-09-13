@@ -94,24 +94,6 @@ const handleScroll = () => {
   });
 };
 
-const initSections = () => {
-  memoizeNavSectionBoundaries();
-  window.addEventListener("resize", handleResize);
-};
-
-const initMenu = () => {
-  toggle.addEventListener("click", toggleMenu);
-  close.addEventListener("click", closeMenu);
-  setNavLinkListeners();
-  firstNavItem.classList.add("active");
-};
-
-const initInternalLinks = () => {
-  internalLinks.forEach(link => {
-    link.addEventListener("click", scrollToSection);
-  });
-};
-
 const scrollToSection = (e) => {
   const href = e.target.tagName === "A" ? e.target.getAttribute("href") : e.target.closest("A").getAttribute("href");
   e.preventDefault();
@@ -132,7 +114,7 @@ const scrollToSection = (e) => {
   }
 };
 
-const initPage = () => {
+const initIsotope = () => {
   imagesLoaded(".isotope-item img", () => {
     const isotope = new Isotope(isotopeWrapper.querySelector(".isotope-box"), {
       itemSelector: ".isotope-item",
@@ -154,9 +136,42 @@ const initPage = () => {
     isotopeWrapper.addEventListener("change", filter);
     filter();
   });
+};
+
+const initSections = () => {
+  memoizeNavSectionBoundaries();
+  window.addEventListener("resize", handleResize);
+};
+
+const initMenu = () => {
+  toggle.addEventListener("click", toggleMenu);
+  close.addEventListener("click", closeMenu);
+  setNavLinkListeners();
+  firstNavItem.classList.add("active");
+};
+
+const initInternalLinks = () => {
+  internalLinks.forEach(link => {
+    link.addEventListener("click", scrollToSection);
+  });
+};
+
+const initTimesStreak = () => {
+  const myStreak = document.querySelector(".my-nyt-streak");
+  const startStreak = new Date("2019-12-26 00:00:00");
+  const today = new Date();
+  const streak = Math.floor(
+    (today.getTime() - startStreak.getTime()) / (1000 * 3600 * 24)
+  );
+  if (myStreak) { myStreak.innerHTML = streak; }
+};
+
+const initPage = () => {
+  initIsotope();
   initSections();
   initMenu();
   initInternalLinks();
+  initTimesStreak();
   window.addEventListener("scroll", handleScroll);
 };
 

@@ -689,13 +689,15 @@
                   <div class="project-thumbnail project-thumbnail-teepublic"></div>
                   <h4>TeePublic</h4>
                   <p>
-                    <span class="emphasis quote">Empowering Independent Creators to Turn Their Passion Into Profit.</span> As a Customer & Creative team engineer, I built features to improve the user experience for artists and shoppers alike.
+                    <span class="emphasis quote">Empowering Independent Creators to Turn Their Passion Into Profit.</span> As a Customer & Creator team engineer, I built features to improve the user experience for artists and shoppers alike.
                   </p>
                   <p>
                     <span class="emphasis">Ruby on Rails</span> |
                     <span class="emphasis">PostgreSQL</span> |
                     <span class="emphasis">Redis</span> |
+                    <span class="emphasis">Sidekiq</span> |
                     <span class="emphasis">ViewComponents</span> |
+                    <span class="emphasis">RSpec</span> |
                     <span class="emphasis">ES6+ JavaScript</span> |
                     <span class="emphasis">Legacy JavaScript</span> |
                     <span class="emphasis">jQuery</span> |
@@ -1186,8 +1188,14 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/lightbox.js"></script>
     <script src="assets/js/initialize.js" type="module"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script>
+      lightbox.option({
+        alwaysShowNavOnTouchDevices: true,
+        resizeDuration: 200,
+        wrapAround: true
+      });
+    </script>
   </body>
 </html>
