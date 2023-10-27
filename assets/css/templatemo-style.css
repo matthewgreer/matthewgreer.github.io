@@ -42,11 +42,19 @@ p {
   color: var(--color-white);
 }
 
-h4 {
+h1, h2, h3, h4 {
+  color: var(--color-white);
   font-size: 1.625rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-white);
   letter-spacing: 0.016rem;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 img {
@@ -147,11 +155,7 @@ html {
   margin: 2.5rem 0 3.75rem;
 }
 
-.menu .author-content h4 {
-  margin-bottom: 0;
-}
-
-.menu .author-content span {
+.menu .author-content .job-title {
   font-size: 0.813rem;
   font-style: italic;
   color: var(--color-white);
@@ -661,7 +665,7 @@ section.my-work .section-heading {
   padding: 5rem 2.813rem 3.125rem 2.813rem;
 }
 
-.prior-career-blurb h4 {
+.prior-career-blurb h3 {
   margin-top: 0;
 }
 
@@ -932,8 +936,8 @@ section.contact-me {
     left: 0%;
   }
 
-  .right-image-post h4,
-  .left-image-post h4 {
+  .right-image-post h3,
+  .left-image-post h3 {
     margin-top: 0;
   }
 
