@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
 
 body {
-  --color-black-almost: #1e1e1e;
+  --color-black-almost: #101010;
   --color-gray-very-dark: #232323;
   --color-gray-dark: #4a4a4a;
   --color-gray: #7a7a7a;
-  --color-orange: #EC4308;
+  --color-orange: #FA320A;
   --color-orange-dark: #C33706;
   --color-white: #fff;
   --color-white-almost: #f7f7f7;
@@ -15,11 +15,7 @@ body {
 }
 
 #page-wrapper {
-  background: url(../images/butterfly-bg.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: var(--color-black-almost);
   width: 100%;
 }
 
@@ -46,11 +42,19 @@ p {
   color: var(--color-white);
 }
 
-h4 {
+h1, h2, h3, h4 {
+  color: var(--color-white);
   font-size: 1.625rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-white);
   letter-spacing: 0.016rem;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 img {
@@ -95,6 +99,10 @@ html {
 .emphasis {
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
+}
+
+.quote {
+  font-style: italic;
 }
 
 .container {
@@ -147,11 +155,7 @@ html {
   margin: 2.5rem 0 3.75rem;
 }
 
-.menu .author-content h4 {
-  margin-bottom: 0;
-}
-
-.menu .author-content span {
+.menu .author-content .job-title {
   font-size: 0.813rem;
   font-style: italic;
   color: var(--color-white);
@@ -299,7 +303,7 @@ html {
   padding: 3.75rem 2.813rem;
 }
 
-.ection-heading h2 {
+.section-heading h2 {
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-white);
@@ -455,6 +459,10 @@ button:hover {
   padding-right: 7%;
 }
 
+.skill-set-blurb .quote {
+  margin: 1rem;
+}
+
 .skill-set-categories {
   color: var(--color-orange);
   font-style: italic;
@@ -520,10 +528,6 @@ button:hover {
 
 .project-item p {
   transition: all 0.5s;
-}
-
-.project-item p span.quote {
-  font-style: italic;
 }
 
 .project-item p.attribution {
@@ -661,7 +665,7 @@ section.my-work .section-heading {
   padding: 5rem 2.813rem 3.125rem 2.813rem;
 }
 
-.prior-career-blurb h4 {
+.prior-career-blurb h3 {
   margin-top: 0;
 }
 
@@ -791,6 +795,14 @@ figure.snip1321 figcaption {
   height: 2.5rem;
   margin-bottom: 33%;
   width: 2.5rem;
+}
+.search-text-for-screen-readers {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 figure.snip1321 h4 {
   margin-top: 0.938rem;
@@ -932,8 +944,8 @@ section.contact-me {
     left: 0%;
   }
 
-  .right-image-post h4,
-  .left-image-post h4 {
+  .right-image-post h3,
+  .left-image-post h3 {
     margin-top: 0;
   }
 
