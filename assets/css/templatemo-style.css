@@ -796,6 +796,14 @@ figure.snip1321 figcaption {
   margin-bottom: 33%;
   width: 2.5rem;
 }
+.search-text-for-screen-readers {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 figure.snip1321 h4 {
   margin-top: 0.938rem;
   margin-bottom: 0.313rem;
