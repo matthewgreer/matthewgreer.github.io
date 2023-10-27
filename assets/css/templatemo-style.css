@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
 
 body {
-  --color-black-almost: #1e1e1e;
+  --color-black-almost: #101010;
   --color-gray-very-dark: #232323;
   --color-gray-dark: #4a4a4a;
   --color-gray: #7a7a7a;
-  --color-orange: #EC4308;
+  --color-orange: #FA320A;
   --color-orange-dark: #C33706;
   --color-white: #fff;
   --color-white-almost: #f7f7f7;
