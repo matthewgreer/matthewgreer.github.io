@@ -93,6 +93,10 @@ html {
   color: var(--color-white);
 }
 
+.quote {
+  font-style: italic;
+}
+
 .container {
   margin: 0 auto;
 }
@@ -451,6 +455,10 @@ button:hover {
   padding-right: 7%;
 }
 
+.skill-set-blurb .quote {
+  margin: 1rem;
+}
+
 .skill-set-categories {
   color: var(--color-orange);
   font-style: italic;
@@ -516,10 +524,6 @@ button:hover {
 
 .project-item p {
   transition: all 0.5s;
-}
-
-.project-item p span.quote {
-  font-style: italic;
 }
 
 .project-item p.attribution {
