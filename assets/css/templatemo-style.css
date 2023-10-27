@@ -5,8 +5,9 @@ body {
   --color-gray-very-dark: #232323;
   --color-gray-dark: #4a4a4a;
   --color-gray: #7a7a7a;
-  --color-orange: #FA320A;
-  --color-orange-dark: #C33706;
+  --color-orange-for-white: #E61E0A;
+  --color-orange-for-black: #FA320A;
+  --color-orange-link-active: #C33706;
   --color-white: #fff;
   --color-white-almost: #f7f7f7;
   --font-weight-bold: 700;
@@ -135,7 +136,7 @@ html {
 .main-nav li:hover a,
 .main-nav li.active a {
   background: var(--color-white);
-  color: var(--color-orange-dark);
+  color: var(--color-orange-link-active);
 }
 
 /* Sidebar Menu */
@@ -183,11 +184,11 @@ html {
 
 .menu .social-network ul li a:hover {
   background-color: var(--color-white);
-  color: var(--color-orange);
+  color: var(--color-orange-for-white);
 }
 
 .menu .social-network ul li a:hover .social-icon {
-  fill: var(--color-orange);
+  fill: var(--color-orange-for-white);
 }
 
 .menu .social-icon {
@@ -239,7 +240,7 @@ html {
   transition: 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-transition: -webkit-transform 233ms cubic-bezier(0, 0, 0.21, 1);
   -webkit-overflow-scrolling: touch;
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-for-white);
   box-sizing: border-box;
   height: 100vh;
   max-height: 100vh !important;
@@ -259,7 +260,7 @@ html {
 .menu-toggle {
   background-color: var(--color-white);
   cursor: pointer;
-  fill: var(--color-orange);
+  fill: var(--color-orange-for-white);
   position: fixed;
   width: 3.75rem;
   height: 3.75rem;
@@ -312,7 +313,7 @@ html {
 .section-heading .line-dec {
   width: 3.75rem;
   height: 0.188rem;
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-for-black);
   margin: 0.625rem auto;
 }
 
@@ -339,7 +340,7 @@ html {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   background-color: var(--color-white);
-  color: var(--color-orange);
+  color: var(--color-orange-for-white);
   font-size: 0.813rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.031rem;
@@ -348,7 +349,7 @@ html {
 }
 
 .white-button a:hover {
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-for-white);
   color: var(--color-white);
 }
 
@@ -356,7 +357,7 @@ button {
   display: inline-block;
   padding: 0.625rem 1.25rem;
   background-color: var(--color-white);
-  color: var(--color-orange);
+  color: var(--color-orange-for-white);
   font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.031rem;
@@ -369,7 +370,7 @@ button {
 
 button:hover {
   outline: none;
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-for-white);
   color: var(--color-white);
 }
 
@@ -464,13 +465,13 @@ button:hover {
 }
 
 .skill-set-categories {
-  color: var(--color-orange);
+  color: var(--color-orange-for-black);
   font-style: italic;
   margin-right: 0.313rem;
 }
 
 .skill-set-divider {
-  color: var(--color-orange);
+  color: var(--color-orange-for-black);
   padding: 0 0.313rem;
 }
 
@@ -536,7 +537,7 @@ button:hover {
 
 .project-item:hover p.attribution span.falsehood {
   text-decoration: line-through;
-  text-decoration-color: var(--color-orange);
+  text-decoration-color: var(--color-orange-for-white);
 }
 
 .project-item p.attribution span.admission {
@@ -545,11 +546,11 @@ button:hover {
 
 .project-item:hover p.attribution span.admission {
   visibility: visible;
-  color:var(--color-orange);
+  color:var(--color-orange-for-white);
 }
 
 .project-item:hover p span.emphasis {
-  color: var(--color-orange);
+  color: var(--color-orange-for-white);
 }
 
 .project-item:hover {
@@ -576,7 +577,7 @@ button:hover {
 }
 
 .project-item:hover .project-icon {
-  fill: var(--color-orange);
+  fill: var(--color-orange-for-white);
 }
 
 .project-item .nyt-streak {
@@ -585,7 +586,7 @@ button:hover {
 }
 
 .project-item .my-nyt-streak {
-  color: var(--color-orange);
+  color: var(--color-orange-for-white);
   display: none;
   font-size: 1.125rem;
   font-weight: var(--font-weight-bold);
@@ -670,7 +671,7 @@ section.my-work .section-heading {
 }
 
 .link {
-  color: var(--color-orange);
+  color: var(--color-orange-for-black);
   font-weight: var(--font-weight-bold);
   transition: all 0.3s;
 }
@@ -681,7 +682,7 @@ section.my-work .section-heading {
 }
 
 .link:visited {
-  color: var(--color-orange);
+  color: var(--color-orange-for-black);
 }
 
 .isotope-wrapper {
@@ -707,8 +708,8 @@ section.my-work .section-heading {
 }
 
 .isotope-toolbar input[type="radio"]:checked + span {
-  color: var(--color-orange);
-  border-bottom: 0.125rem solid var(--color-orange);
+  color: var(--color-orange-for-black);
+  border-bottom: 0.125rem solid var(--color-orange-for-black);
 }
 
 .isotope-box {
@@ -787,7 +788,7 @@ figure.snip1321 figcaption {
   z-index: 2;
 }
 .search-icon {
-  background-color: var(--color-orange);
+  background-color: var(--color-orange-for-white);
   background-image: url(../images/search-icon.svg);
   background-position: center center;
   background-repeat: no-repeat;
