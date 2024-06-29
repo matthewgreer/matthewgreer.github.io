@@ -432,20 +432,30 @@ button:hover {
 /* My Skill Set */
 
 .skills {
-  justify-content: center;
+  /* justify-content: center; */
   margin-bottom: 1.875rem;
 }
 
 .skill-set {
   list-style-position: inside;
   list-style-type: square;
-  text-align: start;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .skill-set li {
   display: list-item;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-set-skills {
+  margin-bottom: 0;
+  margin-left: 1.25rem;
+}
+
+.skill-set-skill {
+  white-space: nowrap;
 }
 
 .skill-set-blurb {
@@ -467,6 +477,10 @@ button:hover {
 .skill-set-divider {
   color: var(--color-orange-for-black);
   padding: 0 0.313rem;
+}
+
+.skill-set-skill > .skill-set-divider {
+  color: var(--color-orange-for-black);
 }
 
 .skill-set-skills {
