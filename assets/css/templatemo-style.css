@@ -295,7 +295,7 @@ html {
 
 .section-heading {
   text-align: center;
-  padding: 3.75rem 2.813rem;
+  padding: 2.25rem 2.813rem 1.75rem;
 }
 
 .section-heading h2 {
@@ -331,13 +331,14 @@ html {
 }
 
 .white-button a {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
   background-color: var(--color-white);
+  border-radius: 1rem;
   color: var(--color-orange-for-white);
+  display: inline-block;
   font-size: 0.813rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.031rem;
+  padding: 0.75rem 1.25rem;
   text-transform: uppercase;
   transition: all 0.5s;
 }
@@ -347,10 +348,11 @@ html {
   color: var(--color-white);
 }
 
-button {
+button.button {
   display: inline-block;
   padding: 0.625rem 1.25rem;
   background-color: var(--color-white);
+  border-radius: 1rem;
   color: var(--color-orange-for-white);
   font-size: 0.75rem;
   font-weight: var(--font-weight-bold);
@@ -362,7 +364,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button.button:hover {
   outline: none;
   background-color: var(--color-orange-for-white);
   color: var(--color-white);
@@ -460,8 +462,10 @@ button:hover {
 
 .skill-set-blurb {
   margin-bottom: 1.875rem;
-  padding-left: 5%;
-  padding-right: 7%;
+}
+
+.skill-set-blurb p {
+  margin: 1rem 0;
 }
 
 .skill-set-blurb .quote {
@@ -493,24 +497,24 @@ button:hover {
 }
 
 .tech-list-svg {
-  height: 6.25rem;
-  margin: 0.313rem;
-  width: 6.25rem;
+  height: 3.125rem;
+  margin: 0.188rem;
+  width: 3.125rem;
 }
 
 .tech-list-svg-narrow {
-  margin: 0.313rem -0.625rem;
+  margin: 0.313rem -0.313rem;
 }
 
-@media screen and (max-width: 494px) {
-  .skill-set {
-    font-size: 0.75rem;
+@media screen and (min-width: 846px) {
+  .tech-list-svg {
+    height: 6.25rem;
+    margin: 0.313rem;
+    width: 6.25rem;
   }
 
-  .tech-list-svg {
-    height: 3.125rem;
-    margin: 0.188rem;
-    width: 3.125rem;
+  .tech-list-svg-narrow {
+    margin: 0.313rem -0.625rem;
   }
 }
 
@@ -586,6 +590,14 @@ button:hover {
 
 .project-item:hover .project-icon {
   fill: var(--color-orange-for-white);
+}
+
+.project-item .skill-set-divider {
+  color: var(--color-white);
+}
+
+.project-item:hover .skill-set-divider {
+  color: var(--color-orange-for-white);
 }
 
 .project-item .nyt-streak {
@@ -1021,25 +1033,31 @@ section.contact-me {
   .responsive-nav {
     display: inline-block;
   }
+
   .section {
     left: 3%;
     right: 3%;
     width: 94%;
   }
+
   .isotope-item {
     margin: 3%;
     width: 94%;
   }
+
   .left-image-post img {
     margin-bottom: 1.875rem;
   }
+
   .right-image-post img {
     margin-top: 1.875rem;
   }
+
   .isotope-item {
     border-bottom: none;
     text-align: center;
   }
+
   .isotope-toolbar {
     margin-bottom: 1.25rem;
   }
