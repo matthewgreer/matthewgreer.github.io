@@ -1,4 +1,6 @@
-import "./isotope.pkgd.min.js";
+// import "./isotope.pkgd.min.js";
+import Glide, { Breakpoints, Controls, Images, Swipe } from "./glide.modular.esm.js";
+
 
 // definitions
 const navSections = document.querySelectorAll(".section");
@@ -10,8 +12,8 @@ const navItems = nav.querySelectorAll("LI");
 const navLinks = nav.querySelectorAll("A");
 const firstNavItem = navItems[0];
 const internalLinks = document.querySelectorAll(".internal-link");
-const isotopeWrapper = document.querySelector(".isotope-wrapper");
-const filterCheckboxes = isotopeWrapper.querySelectorAll('INPUT[type="radio"]');
+// const isotopeWrapper = document.querySelector(".isotope-wrapper");
+// const filterCheckboxes = isotopeWrapper.querySelectorAll('INPUT[type="radio"]');
 
 const imagesLoaded = (selector, callback) => {
   const images = document.querySelectorAll(selector);
@@ -114,29 +116,44 @@ const scrollToSection = (e) => {
   }
 };
 
-const initIsotope = () => {
-  imagesLoaded(".isotope-item img", () => {
-    const isotope = new Isotope(isotopeWrapper.querySelector(".isotope-box"), {
-      itemSelector: ".isotope-item",
-      layoutMode: "masonry"
-    });
-    const filter = () => {
-      let type = "";
-      filterCheckboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-          type = checkbox.dataset.type || "*";
-          if (type !== "*") {
-            type = '[data-type="' + type + '"]';
-          }
-        }
-      });
-      isotope.arrange({ filter: type });
-    };
-
-    isotopeWrapper.addEventListener("change", filter);
-    filter();
+const initGlide = () => {
+  const glide = new Glide(".glide", {
+    type: "carousel",
+    startAt: 0,
+    perView: 1,
+    gap: 0,
+    autoplay: 3000,
+    hoverpause: true,
+    animationDuration: 1000,
+    animationTimingFunc: "ease-in-out"
   });
-};
+
+  glide.mount({ Breakpoints, Controls, Images, Swipe });
+}
+
+// const initIsotope = () => {
+//   imagesLoaded(".isotope-item img", () => {
+//     const isotope = new Isotope(isotopeWrapper.querySelector(".isotope-box"), {
+//       itemSelector: ".isotope-item",
+//       layoutMode: "masonry"
+//     });
+//     const filter = () => {
+//       let type = "";
+//       filterCheckboxes.forEach(checkbox => {
+//         if (checkbox.checked) {
+//           type = checkbox.dataset.type || "*";
+//           if (type !== "*") {
+//             type = '[data-type="' + type + '"]';
+//           }
+//         }
+//       });
+//       isotope.arrange({ filter: type });
+//     };
+
+//     isotopeWrapper.addEventListener("change", filter);
+//     filter();
+//   });
+// };
 
 const initSections = () => {
   memoizeNavSectionBoundaries();
@@ -167,7 +184,8 @@ const initTimesStreak = () => {
 };
 
 const initPage = () => {
-  initIsotope();
+  // initIsotope();
+  initGlide();
   initSections();
   initMenu();
   initInternalLinks();
