@@ -12,8 +12,6 @@ const navItems = nav.querySelectorAll("LI");
 const navLinks = nav.querySelectorAll("A");
 const firstNavItem = navItems[0];
 const internalLinks = document.querySelectorAll(".internal-link");
-// const isotopeWrapper = document.querySelector(".isotope-wrapper");
-// const filterCheckboxes = isotopeWrapper.querySelectorAll('INPUT[type="radio"]');
 
 const imagesLoaded = (selector, callback) => {
   const images = document.querySelectorAll(selector);
@@ -117,43 +115,24 @@ const scrollToSection = (e) => {
 };
 
 const initGlide = () => {
-  const glide = new Glide(".glide", {
-    type: "carousel",
-    startAt: 0,
-    perView: 1,
-    gap: 0,
-    autoplay: 3000,
-    hoverpause: true,
-    animationDuration: 1000,
-    animationTimingFunc: "ease-in-out"
+  imagesLoaded(".glide__slide img", () => {
+    const glide = new Glide(".glide", {
+      type: "carousel",
+      startAt: 0,
+      perView: 1,
+      gap: 30,
+      keyboard: true,
+      peek: {
+        before: 80,
+        after: 80
+      },
+      animationDuration: 1000,
+      animationTimingFunc: "ease-in-out"
+    });
+
+    glide.mount({ Breakpoints, Controls, Images, Swipe });
   });
-
-  glide.mount({ Breakpoints, Controls, Images, Swipe });
 }
-
-// const initIsotope = () => {
-//   imagesLoaded(".isotope-item img", () => {
-//     const isotope = new Isotope(isotopeWrapper.querySelector(".isotope-box"), {
-//       itemSelector: ".isotope-item",
-//       layoutMode: "masonry"
-//     });
-//     const filter = () => {
-//       let type = "";
-//       filterCheckboxes.forEach(checkbox => {
-//         if (checkbox.checked) {
-//           type = checkbox.dataset.type || "*";
-//           if (type !== "*") {
-//             type = '[data-type="' + type + '"]';
-//           }
-//         }
-//       });
-//       isotope.arrange({ filter: type });
-//     };
-
-//     isotopeWrapper.addEventListener("change", filter);
-//     filter();
-//   });
-// };
 
 const initSections = () => {
   memoizeNavSectionBoundaries();
@@ -184,7 +163,6 @@ const initTimesStreak = () => {
 };
 
 const initPage = () => {
-  // initIsotope();
   initGlide();
   initSections();
   initMenu();
