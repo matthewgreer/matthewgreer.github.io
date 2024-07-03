@@ -50,14 +50,19 @@
   var close = document.getElementById("menu-close");
 
   toggle.addEventListener("click", function(e) {
-    if (menu.classList.contains("open")) {
-      menu.classList.remove("open");
-    } else {
+    const expanded = toggle.getAttribute("aria-expanded") === "true" || false;
+    toggle.setAttribute("aria-expanded", !expanded);
+    menu.hidden = expanded;
+    if (!expanded) {
       menu.classList.add("open");
+    } else {
+      menu.classList.remove("open");
     }
   });
 
   close.addEventListener("click", function(e) {
+    toggle.setAttribute("aria-expanded", "false");
+    menu.hidden = true;
     menu.classList.remove("open");
   });
 
@@ -67,6 +72,8 @@
       var menuLinks = document.querySelectorAll(".nav-items a");
       menuLinks.forEach(function(link) {
         link.addEventListener("click", function() {
+          toggle.setAttribute("aria-expanded", "false");
+          menu.hidden = true;
           menu.classList.remove("open");
         });
       });
