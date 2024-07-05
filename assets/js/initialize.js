@@ -42,15 +42,20 @@ const memoizeNavSectionBoundaries = () => {
 };
 
 const closeMenu = () => {
+  toggle.setAttribute("aria-expanded", false);
+  menu.hidden = true;
   menu.classList.remove("open");
 };
 
 const openMenu = () => {
+  toggle.setAttribute("aria-expanded", true);
+  menu.hidden = false;
   menu.classList.add("open");
 };
 
 const toggleMenu = () => {
-  menu.classList.contains("open") ? closeMenu() : openMenu();
+  const expanded = toggle.getAttribute("aria-expanded") === "true" || false;
+  !expanded ? openMenu() : closeMenu();
 };
 
 const setNavLinkListeners = () => {
@@ -58,18 +63,14 @@ const setNavLinkListeners = () => {
     navLinks.forEach(link => {
       link.addEventListener("click", closeMenu);
     });
+    closeMenu();
   } else {
     navLinks.forEach(link => {
       link.removeEventListener("click", closeMenu);
     });
+    openMenu();
   }
 };
-
-const handleResize = () => {
-  memoizeNavSectionBoundaries();
-  setNavLinkListeners();
-  handleScroll();
-}
 
 const updateActiveNavItem = (navSection) => {
   const activeNavSectionId = navSection.dataset.section;
