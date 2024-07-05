@@ -1,6 +1,4 @@
-// import "./isotope.pkgd.min.js";
 import Glide, { Breakpoints, Controls, Images, Swipe } from "./glide.modular.esm.js";
-
 
 // definitions
 const navSections = document.querySelectorAll(".section");
@@ -12,6 +10,7 @@ const navItems = nav.querySelectorAll("LI");
 const navLinks = nav.querySelectorAll("A");
 const firstNavItem = navItems[0];
 const internalLinks = document.querySelectorAll(".internal-link");
+const glideContainer = document.querySelector(".glide");
 
 const imagesLoaded = (selector, callback) => {
   const images = document.querySelectorAll(selector);
@@ -95,6 +94,19 @@ const handleScroll = () => {
   });
 };
 
+const resizeGlideControls = () => {
+  const glideHeight = glideContainer.offsetHeight;
+  const arrowSize = glideHeight / 5;
+  document.documentElement.style.setProperty("--arrow-btn-size", `${arrowSize}px`);
+}
+
+const handleResize = () => {
+  memoizeNavSectionBoundaries();
+  setNavLinkListeners();
+  handleScroll();
+  resizeGlideControls();
+}
+
 const scrollToSection = (e) => {
   const href = e.target.tagName === "A" ? e.target.getAttribute("href") : e.target.closest("A").getAttribute("href");
   e.preventDefault();
@@ -124,14 +136,15 @@ const initGlide = () => {
       gap: 30,
       keyboard: true,
       peek: {
-        before: 80,
-        after: 80
+        before: 50,
+        after: 50
       },
       animationDuration: 1000,
       animationTimingFunc: "ease-in-out"
     });
 
     glide.mount({ Breakpoints, Controls, Images, Swipe });
+    resizeGlideControls();
   });
 }
 
