@@ -96,7 +96,8 @@ const handleScroll = () => {
 
 const resizeGlideControls = () => {
   const glideHeight = glideContainer.offsetHeight;
-  const arrowSize = glideHeight / 5;
+  const glideWidth = glideContainer.offsetWidth;
+  const arrowSize = Math.floor((glideHeight + glideWidth) / 2 * 0.125);
   document.documentElement.style.setProperty("--arrow-btn-size", `${arrowSize}px`);
 }
 
@@ -135,10 +136,6 @@ const initGlide = () => {
       perView: 1,
       gap: 30,
       keyboard: true,
-      peek: {
-        before: 50,
-        after: 50
-      },
       animationDuration: 1000,
       animationTimingFunc: "ease-in-out"
     });
