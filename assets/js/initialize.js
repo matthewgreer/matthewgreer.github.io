@@ -1,4 +1,4 @@
-import Glide, { Breakpoints, Controls, Images, Swipe } from "./glide.modular.esm.js";
+import "./isotope.pkgd.min.js";
 
 // definitions
 const navSections = document.querySelectorAll(".section");
@@ -10,7 +10,8 @@ const navItems = nav.querySelectorAll("LI");
 const navLinks = nav.querySelectorAll("A");
 const firstNavItem = navItems[0];
 const internalLinks = document.querySelectorAll(".internal-link");
-const glideContainer = document.querySelector(".glide");
+const isotopeWrapper = document.querySelector(".isotope-wrapper");
+const filterCheckboxes = isotopeWrapper.querySelectorAll('INPUT[type="radio"]');
 
 const imagesLoaded = (selector, callback) => {
   const images = document.querySelectorAll(selector);
@@ -41,20 +42,15 @@ const memoizeNavSectionBoundaries = () => {
 };
 
 const closeMenu = () => {
-  toggle.setAttribute("aria-expanded", false);
-  menu.hidden = true;
   menu.classList.remove("open");
 };
 
 const openMenu = () => {
-  toggle.setAttribute("aria-expanded", true);
-  menu.hidden = false;
   menu.classList.add("open");
 };
 
 const toggleMenu = () => {
-  const expanded = toggle.getAttribute("aria-expanded") === "true" || false;
-  !expanded ? openMenu() : closeMenu();
+  menu.classList.contains("open") ? closeMenu() : openMenu();
 };
 
 const setNavLinkListeners = () => {
@@ -62,14 +58,18 @@ const setNavLinkListeners = () => {
     navLinks.forEach(link => {
       link.addEventListener("click", closeMenu);
     });
-    closeMenu();
   } else {
     navLinks.forEach(link => {
       link.removeEventListener("click", closeMenu);
     });
-    openMenu();
   }
 };
+
+const handleResize = () => {
+  memoizeNavSectionBoundaries();
+  setNavLinkListeners();
+  handleScroll();
+}
 
 const updateActiveNavItem = (navSection) => {
   const activeNavSectionId = navSection.dataset.section;
@@ -94,20 +94,6 @@ const handleScroll = () => {
   });
 };
 
-const resizeGlideControls = () => {
-  const glideHeight = glideContainer.offsetHeight;
-  const glideWidth = glideContainer.offsetWidth;
-  const arrowSize = Math.floor((glideHeight + glideWidth) / 2 * 0.125);
-  document.documentElement.style.setProperty("--arrow-btn-size", `${arrowSize}px`);
-}
-
-const handleResize = () => {
-  memoizeNavSectionBoundaries();
-  setNavLinkListeners();
-  handleScroll();
-  resizeGlideControls();
-}
-
 const scrollToSection = (e) => {
   const href = e.target.tagName === "A" ? e.target.getAttribute("href") : e.target.closest("A").getAttribute("href");
   e.preventDefault();
@@ -128,22 +114,29 @@ const scrollToSection = (e) => {
   }
 };
 
-const initGlide = () => {
-  imagesLoaded(".glide__slide img", () => {
-    const glide = new Glide(".glide", {
-      type: "carousel",
-      startAt: 0,
-      perView: 1,
-      gap: 30,
-      keyboard: true,
-      animationDuration: 1000,
-      animationTimingFunc: "ease-in-out"
+const initIsotope = () => {
+  imagesLoaded(".isotope-item img", () => {
+    const isotope = new Isotope(isotopeWrapper.querySelector(".isotope-box"), {
+      itemSelector: ".isotope-item",
+      layoutMode: "masonry"
     });
+    const filter = () => {
+      let type = "";
+      filterCheckboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          type = checkbox.dataset.type || "*";
+          if (type !== "*") {
+            type = '[data-type="' + type + '"]';
+          }
+        }
+      });
+      isotope.arrange({ filter: type });
+    };
 
-    glide.mount({ Breakpoints, Controls, Images, Swipe });
-    resizeGlideControls();
+    isotopeWrapper.addEventListener("change", filter);
+    filter();
   });
-}
+};
 
 const initSections = () => {
   memoizeNavSectionBoundaries();
@@ -174,7 +167,7 @@ const initTimesStreak = () => {
 };
 
 const initPage = () => {
-  initGlide();
+  initIsotope();
   initSections();
   initMenu();
   initInternalLinks();
